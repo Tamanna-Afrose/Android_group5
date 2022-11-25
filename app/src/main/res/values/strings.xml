@@ -1,4 +1,17 @@
 <resources>
-    <string name="app_name">sports_Mart</string>
+    <string name="app_name">Sports Mart</string>
     <string name="slogan">1000+ products\n in your pocket</string>
+    <string name="shop">Shop Now</string>
+    <string name="suggestion">Find By Categories ?</string>
+    <string name="cricket">Cricket</string>
+    <string name="football">Football</string>
+    <string name="badminton">Badminton</string>
+    <string name="vollyBall">Volly Ball</string>
+    <string name="golf">Golf</string>
+    <string name="basketBall">Basket Ball</string>
+    <string name="tenis">Table Tenis</string>
+    <string name="chess">Chess</string>
+    <string name="polo">Polo</string>
+    <string name="ludo">Ludo</string>
+    <string name="carrom">Carrom</string>
 </resources>
