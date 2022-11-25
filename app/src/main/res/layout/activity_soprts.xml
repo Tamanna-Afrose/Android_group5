@@ -5,32 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".MainActivity">
-
-
-    <!--    <ImageView-->
-    <!--        android:id="@+id/logo"-->
-    <!--        android:layout_width="86dp"-->
-    <!--        android:layout_height="79dp"-->
-    <!--        app:srcCompat="@drawable/blue_logo"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent"-->
-    <!--        android:layout_marginTop="15dp"-->
-    <!--        android:layout_marginLeft="20dp"/>-->
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/appName"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginLeft="10dp"-->
-    <!--        android:layout_marginTop="25dp"-->
-    <!--        android:fontFamily="sans-serif-medium"-->
-    <!--        android:text="@string/app_name"-->
-    <!--        android:textAppearance="@style/TextAppearance.AppCompat.Display1"-->
-    <!--        android:textColor="@color/DarkBlue"-->
-    <!--        android:textSize="40sp"-->
-    <!--        app:layout_constraintStart_toEndOf="@+id/logo"-->
-
+    tools:context=".Soprts">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

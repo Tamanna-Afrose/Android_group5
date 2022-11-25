@@ -14,4 +14,7 @@
     <string name="polo">Polo</string>
     <string name="ludo">Ludo</string>
     <string name="carrom">Carrom</string>
+    <string name="amount">Select Amount :</string>
+    <string name="confirm">Confirm</string>
+    <string name="bill">Make Bill</string>
 </resources>
