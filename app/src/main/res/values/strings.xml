@@ -42,4 +42,5 @@
     <string name="cancelString">clicked cancel \noperation cancel</string>
     <string name="quantityToast">Item Added</string>
     <string name="marqueeText">Click on Item Image to Shop</string>
+    <string name="itemSelectToast">Item selected,\n choose amount and check confirm to order</string>
 </resources>
