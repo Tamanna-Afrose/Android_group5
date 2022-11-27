@@ -17,4 +17,29 @@
     <string name="amount">Select Amount :</string>
     <string name="confirm">Confirm</string>
     <string name="bill">Make Bill</string>
+    <string name="golves_text"><u>৳ 460 Cricket Bating Hand Gloves - White</u></string>
+    <string name="dialog_title">Product details of Cricket Bating Hand Gloves - White</string>
+    <string name="dialogMessage">price:৳ 460 \n1. It should provide best flex so that player can effectively grip the cricket bat
+\n2. It is lightweight in nature
+\n3. It protects player figures from unwanted injuries</string>
+    <string name="bat_text"><u>৳ 5,300 SS Master Kashmir Willow Cricket Bat, Short Handle</u></string>
+    <string name="batTitle">Product Details of SS Master Kashmir Willow Cricket Bat, Short Handle: </string>
+    <string name="bat_details">price ৳ 5,300 \nSS Master Cricket Bat \nMaster series \nKashmir Willow Bat \nFull Size \nShort Handle \nThis SS Master Kashmir Willow Cricket Bat is made for senior men and is of grade one. The handle of the bat is made of sarawak cane which is light yet sturdy. The blade of the bat is made of Kashmir willow which is extremely hardy. The cricket bat comes with extra thick edges for good pickup and is shaped after top range bats. The bat absorbs shock well too preventing damage and strain to your hands in the long run.</string>
+    <string name="helmetText"><u>৳ 500 Cricket Helmet :black</u></string>
+    <string name="helmetTitle">Product Details of cricket helmet-black: </string>
+    <string name="helmet_details">Product Type: Helmet \nColor: Green \nl: Durable</string>
+    <string name="stamp_text"><u>৳ 1,280: CA - Wooden Cricket Stumps - 1 Set</u></string>
+    <string name="stampTitle">Product deatils of CA - Wooden Cricket Stumps - 1 Set:</string>
+    <string name="stamp_details">৳ 1,280 \nType: Wooden Stumps \nStamp: 3 Pcs \nBails: 2 Pcs \nColor: Wood \nMaterial: Wooden</string>
+    <string name="jersey_text"><u>৳ 290: Bangladesh T20 World Cup Full Sleeve New Jersey 2022</u></string>
+    <string name="jerseyTitle">Product deatils of Bangladesh T20 World Cup Full Sleeve New Jersey 2022:</string>
+    <string name="jersey_details">৳ 290: \nItem Type: Bangladesh Jersey \nSports: Cricket \nTournament: ICC T20 World Cup \nSeason: Australia 2022 \nSleeve length: Full Sleeve
+    \nColour: Multicolor \nNeck: Collar \nFabrics: Microfiber Polyester \nBreathable Fabric \nLightweight \nSize: M, L, XL, XXL</string>
+    <string name="ballText">৳ 67: 1 Pcs Cricket Rubber Ball - Maruti - Indian</string>
+    <string name="ballTitle">product details of 1 Pcs Cricket Rubber Ball</string>
+    <string name="ball_details">Standard size for cricket Made from High Quality tanned Rubber,Maruti Brand,Made in India</string>
+    <string name="addedItem">Add Item</string>
+    <string name="cancelString">clicked cancel \noperation cancel</string>
+    <string name="quantityToast">Item Added</string>
+    <string name="marqueeText">Click on Item Image to Shop</string>
 </resources>
