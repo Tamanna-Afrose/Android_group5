@@ -40,24 +40,17 @@
                 app:layout_constraintStart_toEndOf="@+id/logo"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <EditText
+            <SearchView
                 android:id="@+id/search_bar"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="20dp"
                 android:background="@drawable/round_button"
-                app:layout_constraintTop_toBottomOf="@+id/logo" />
+                app:layout_constraintTop_toBottomOf="@+id/logo"/>
 
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="38dp"
-                android:layout_marginEnd="20dp"
-                android:src="@android:drawable/ic_menu_search"
-                app:layout_constraintEnd_toEndOf="@+id/search_bar"
-                app:layout_constraintTop_toTopOf="@+id/search_bar"
-                app:tint="@color/black" />
+
 
             <TextView
                 android:id="@+id/suggest"
@@ -87,6 +80,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
+
 
                 <Button
                     android:id="@+id/cricket"
