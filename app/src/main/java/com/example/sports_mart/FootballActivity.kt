@@ -1,0 +1,130 @@
+package com.example.sports_mart
+
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import com.example.sports_mart.databinding.ActivityCricketBinding
+import com.example.sports_mart.databinding.ActivityFootballBinding
+
+class FootballActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityFootballBinding
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityFootballBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        val textMarquee = binding.marqueeText
+        textMarquee.isSelected = true
+        textMarquee.isSingleLine = true
+        binding.footballText.setOnClickListener {
+            var builder = AlertDialog.Builder(this)
+            builder.setTitle(R.string.footballTittle)
+            builder.setMessage(R.string.footballDetails)
+            builder.setIcon(android.R.drawable.ic_dialog_info)
+            builder.setPositiveButton(R.string.addedItem) { dialogInterface, which ->
+                Toast.makeText(applicationContext, "Item Added", Toast.LENGTH_LONG).show()
+            }
+            builder.setNeutralButton("Cancel") { dialogInterface, which ->
+                Toast.makeText(applicationContext, R.string.cancelString, Toast.LENGTH_LONG).show()
+            }
+            val alertDialog: AlertDialog = builder.create()
+            alertDialog.setCancelable(false)
+            alertDialog.show()
+        }
+        binding.netText.setOnClickListener {
+            var builder = AlertDialog.Builder(this)
+            builder.setTitle(R.string.netTitle)
+            builder.setMessage(R.string.net_details)
+            builder.setIcon(android.R.drawable.ic_dialog_info)
+            builder.setPositiveButton(R.string.addedItem) { dialogInterface, which ->
+                Toast.makeText(applicationContext, "Item Added", Toast.LENGTH_LONG).show()
+            }
+            builder.setNeutralButton("Cancel") { dialogInterface, which ->
+                Toast.makeText(applicationContext, R.string.cancelString, Toast.LENGTH_LONG).show()
+            }
+            val alertDialog: AlertDialog = builder.create()
+            alertDialog.setCancelable(false)
+            alertDialog.show()
+        }
+        binding.shoesText.setOnClickListener {
+            var builder = AlertDialog.Builder(this)
+            builder.setTitle(R.string.shoe_title)
+            builder.setMessage(R.string.shoe_details)
+            builder.setIcon(android.R.drawable.ic_dialog_info)
+            builder.setPositiveButton(R.string.addedItem) { dialogInterface, which ->
+                Toast.makeText(applicationContext, "Item Added", Toast.LENGTH_LONG).show()
+            }
+            builder.setNeutralButton("Cancel") { dialogInterface, which ->
+                Toast.makeText(applicationContext, R.string.cancelString, Toast.LENGTH_LONG).show()
+            }
+            val alertDialog: AlertDialog = builder.create()
+            alertDialog.setCancelable(false)
+            alertDialog.show()
+        }
+        binding.brazilJerseyText.setOnClickListener {
+            var builder = AlertDialog.Builder(this)
+            builder.setTitle(R.string.brazilJerseyText)
+            builder.setMessage(R.string.brazilJersey_detail)
+            builder.setIcon(android.R.drawable.ic_dialog_info)
+            builder.setPositiveButton(R.string.addedItem) { dialogInterface, which ->
+                Toast.makeText(applicationContext, "Item Added", Toast.LENGTH_LONG).show()
+            }
+            builder.setNeutralButton("Cancel") { dialogInterface, which ->
+                Toast.makeText(applicationContext, R.string.cancelString, Toast.LENGTH_LONG).show()
+            }
+            val alertDialog: AlertDialog = builder.create()
+            alertDialog.setCancelable(false)
+            alertDialog.show()
+        }
+        binding.minusButton.setOnClickListener {
+            quantity--
+            if (quantity <= 0) {
+                Log.d("Cricket", "quantity is less than 0")
+                val toast = Toast.makeText(
+                    applicationContext, R.string.quantityToast, Toast.LENGTH_SHORT
+                )
+                quantity = 1
+            }
+            binding.quantity.text = quantity.toString()
+        }
+        binding.plusButton.setOnClickListener {
+            quantity++
+            binding.quantity.text = quantity.toString()
+        }
+        binding.football.setOnClickListener {
+            Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
+            productCost = 840
+        }
+        binding.goalPost.setOnClickListener {
+            Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
+            productCost = 280
+        }
+        binding.shoes.setOnClickListener {
+            Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
+            productCost = 1323
+        }
+        binding.brazilJersey.setOnClickListener {
+            Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
+            productCost = 227
+        }
+        binding.confirm.setOnClickListener {
+            bill(productCost)
+            binding.cost.text = "$quantity product \nCosts " + totalCost.toString()
+            shoppingBill= shoppingBill+ totalCost
+            quantity = 1;
+            binding.quantity.text = quantity.toString()
+        }
+        binding.bill.setOnClickListener {
+            Log.i("Cricket", "$shoppingBill")
+            val intent = Intent(this, PaymentActivity::class.java)
+            startActivity(intent)
+        }
+    }
+    fun bill(productCost: Int) {
+        Log.i("Cricket", "$quantity")
+        totalCost = productCost * quantity
+        Log.i("Cricket", "total amount $totalCost")
+    }
+}
