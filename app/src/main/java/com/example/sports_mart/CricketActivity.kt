@@ -11,7 +11,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sports_mart.databinding.ActivityCricketBinding
-var quantity: Int = 1
+var quantity: Int = 0
 var productCost: Int = 0
 var totalCost: Int = 0
 var shoppingBill=0
@@ -120,8 +120,9 @@ class CricketActivity : AppCompatActivity() {
             if (quantity <= 0) {
                 Log.d("Cricket", "quantity is less than 0")
                 val toast = Toast.makeText(
-                    applicationContext, R.string.quantityToast, Toast.LENGTH_SHORT
+                    applicationContext, R.string.minusToast, Toast.LENGTH_SHORT
                 )
+                toast.show()
                 quantity = 1
             }
             binding.quantity.text = quantity.toString()
