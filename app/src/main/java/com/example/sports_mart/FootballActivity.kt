@@ -4,6 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.view.animation.AnimationUtils
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.sports_mart.databinding.ActivityCricketBinding
@@ -94,18 +97,22 @@ class FootballActivity : AppCompatActivity() {
             binding.quantity.text = quantity.toString()
         }
         binding.football.setOnClickListener {
+            animationImage(binding.football)
             Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
             productCost = 840
         }
         binding.goalPost.setOnClickListener {
+            animationImage(binding.goalPost)
             Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
             productCost = 280
         }
         binding.shoes.setOnClickListener {
+            animationImage(binding.shoes)
             Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
             productCost = 1323
         }
         binding.brazilJersey.setOnClickListener {
+            animationImage(binding.brazilJersey)
             Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
             productCost = 227
         }
@@ -126,5 +133,11 @@ class FootballActivity : AppCompatActivity() {
         Log.i("Cricket", "$quantity")
         totalCost = productCost * quantity
         Log.i("Cricket", "total amount $totalCost")
+    }
+    fun animationImage(image: ImageView)
+    {
+        image.visibility = View.VISIBLE
+        val animationFadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in)
+        image.startAnimation(animationFadeIn)
     }
 }
