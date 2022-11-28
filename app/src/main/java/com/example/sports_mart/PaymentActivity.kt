@@ -16,34 +16,34 @@ class PaymentActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.paymentShow.text= getString(R.string.totalBill,shoppingBill )
         binding.orderButton.setOnClickListener {
-            val email= binding.email.text
-            if(email == null)
-            {
-                val toast = Toast.makeText(
-                    applicationContext, R.string.mailToast, Toast.LENGTH_SHORT
-                )
-                toast.show()
-            }
-            val address= binding.address.text
-            if(address == null)
-            {
-                val toast = Toast.makeText(
-                    applicationContext, R.string.addressToast, Toast.LENGTH_SHORT
-                )
-                toast.show()
-            }
-            if(email!=null && address!=null)
-            {
-                val toast = Toast.makeText(
-                    applicationContext, R.string.confirmOrder, Toast.LENGTH_SHORT
-                )
-                toast.show()
-            }
+            orderConfirm()
         }
         binding.backButotn.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
 
             startActivity(intent)
+        }
+    }
+    fun orderConfirm() {
+        val email: String = binding.email.text.toString()
+        if (email == null) {
+            val toast = Toast.makeText(
+                applicationContext, R.string.mailToast, Toast.LENGTH_SHORT
+            )
+            toast.show()
+        }
+        val address = binding.address.text
+        if (address == null) {
+            val toast = Toast.makeText(
+                applicationContext, R.string.addressToast, Toast.LENGTH_SHORT
+            )
+            toast.show()
+        }
+        if (email != null && address != null) {
+            val toast = Toast.makeText(
+                applicationContext, R.string.confirmOrder, Toast.LENGTH_SHORT
+            )
+            toast.show()
         }
     }
 }
