@@ -1,16 +1,18 @@
 package com.example.sports_mart
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sports_mart.databinding.ActivityCricketBinding
-var quantity: Int=1
-var productCost:Int=0
-var totalCost:Int =0
+var quantity: Int = 1
+var productCost: Int = 0
+var totalCost: Int = 0
 class CricketActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCricketBinding
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCricketBinding.inflate(layoutInflater)
@@ -108,42 +110,55 @@ class CricketActivity : AppCompatActivity() {
         val textMarquee = binding.marqueeText
         textMarquee.isSelected = true
         textMarquee.isSingleLine = true
-            binding.minusButton.setOnClickListener {
-                quantity--
-                if (quantity <= 0) {
-                    Log.d("Cricket", "quantity is less than 0")
-                    val toast = Toast.makeText(
-                        applicationContext, R.string.quantityToast, Toast.LENGTH_SHORT
-                    )
-                    quantity = 1
-                }
-                binding.quantity.text = quantity.toString()
+        binding.minusButton.setOnClickListener {
+            quantity--
+            if (quantity <= 0) {
+                Log.d("Cricket", "quantity is less than 0")
+                val toast = Toast.makeText(
+                    applicationContext, R.string.quantityToast, Toast.LENGTH_SHORT
+                )
+                quantity = 1
             }
-            binding.plusButton.setOnClickListener {
-                quantity++
-                binding.quantity.text = quantity.toString()
-            }
-
+            binding.quantity.text = quantity.toString()
+        }
+        binding.plusButton.setOnClickListener {
+            quantity++
+            binding.quantity.text = quantity.toString()
+        }
         binding.golves.setOnClickListener {
             Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
             productCost = 460
         }
+        binding.helmet.setOnClickListener {
+            Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
+            productCost = 500
+        }
+        binding.ball.setOnClickListener {
+            Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
+            productCost = 67
+        }
+        binding.stamp.setOnClickListener {
+            Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
+            productCost = 1280
+        }
+        binding.jersey.setOnClickListener {
+            Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
+            productCost = 290
+        }
+        binding.bat.setOnClickListener {
+            Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
+            productCost = 5300
+        }
         binding.confirm.setOnClickListener {
             bill(productCost)
-            binding.cost.text = "Quantity $quantity gloves \nCost "+ totalCost.toString()
-
+            binding.cost.text = "$quantity product \nCosts " + totalCost.toString()
+            quantity = 1;
+            binding.quantity.text = quantity.toString()
         }
-
     }
-
-    fun bill( productCost:Int)
-    {
+    fun bill(productCost: Int) {
         Log.i("Cricket", "$quantity")
-        totalCost= productCost * quantity
+        totalCost = productCost * quantity
         Log.i("Cricket", "total amount $totalCost")
-
     }
-
-
-
 }
