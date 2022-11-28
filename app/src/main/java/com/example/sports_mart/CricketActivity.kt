@@ -161,7 +161,6 @@ class CricketActivity : AppCompatActivity() {
         binding.bill.setOnClickListener {
             Log.i("Cricket", "$shoppingBill")
             val intent = Intent(this, PaymentActivity::class.java)
-
             startActivity(intent)
         }
     }

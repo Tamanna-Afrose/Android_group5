@@ -52,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="@string/Adress"
+        android:text="@string/addressText"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/bag"
@@ -62,7 +62,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/LightBlue"
-        android:hint="@string/addressText"
+        android:hint="@string/Adress"
         android:inputType="textPostalAddress"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -117,7 +117,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Bkash" />
-
         <RadioButton
             android:id="@+id/card"
             android:layout_width="wrap_content"

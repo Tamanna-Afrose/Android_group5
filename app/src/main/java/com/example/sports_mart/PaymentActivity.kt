@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.sports_mart.databinding.ActivityPaymentBinding
-
 class PaymentActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPaymentBinding
     @SuppressLint("StringFormatMatches")
@@ -20,30 +19,32 @@ class PaymentActivity : AppCompatActivity() {
         }
         binding.backButotn.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
-
             startActivity(intent)
         }
     }
+    @SuppressLint("StringFormatMatches")
     fun orderConfirm() {
         val email: String = binding.email.text.toString()
-        if (email == null) {
+        if (email=="") {
             val toast = Toast.makeText(
                 applicationContext, R.string.mailToast, Toast.LENGTH_SHORT
             )
             toast.show()
         }
-        val address = binding.address.text
-        if (address == null) {
+        val address = binding.address.text.toString()
+        if (address == "") {
             val toast = Toast.makeText(
                 applicationContext, R.string.addressToast, Toast.LENGTH_SHORT
             )
             toast.show()
         }
-        if (email != null && address != null) {
+        if (email != "" && address != "") {
             val toast = Toast.makeText(
-                applicationContext, R.string.confirmOrder, Toast.LENGTH_SHORT
+                applicationContext, R.string.confirmOrder, Toast.LENGTH_LONG
             )
             toast.show()
+            shoppingBill=0
+            binding.paymentShow.text= getString(R.string.totalBill,shoppingBill)
         }
     }
 }
