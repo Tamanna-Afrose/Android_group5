@@ -11,7 +11,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.sports_mart.databinding.ActivityCricketBinding
 import com.example.sports_mart.databinding.ActivityFootballBinding
-
 class FootballActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFootballBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -86,8 +85,9 @@ class FootballActivity : AppCompatActivity() {
             if (quantity <= 0) {
                 Log.d("Cricket", "quantity is less than 0")
                 val toast = Toast.makeText(
-                    applicationContext, R.string.quantityToast, Toast.LENGTH_SHORT
+                    applicationContext, R.string.minusToast, Toast.LENGTH_SHORT
                 )
+                toast.show()
                 quantity = 1
             }
             binding.quantity.text = quantity.toString()

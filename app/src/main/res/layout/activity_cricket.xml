@@ -90,7 +90,6 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
                 android:background="@color/LightBlue"
-                android:hint="1"
                 android:inputType="numberDecimal"
                 android:textAlignment="center"
                 android:textColor="@color/Red"
@@ -137,6 +136,7 @@
                 android:layout_marginStart="20dp"
                 android:text="Your Amount"
                 android:textSize="20sp"
+                android:textColor="@color/black"
                 app:layout_constraintStart_toEndOf="@+id/bill"
                 app:layout_constraintTop_toTopOf="@+id/bill"></TextView>
         </androidx.constraintlayout.widget.ConstraintLayout>

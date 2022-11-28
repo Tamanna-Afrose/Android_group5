@@ -40,6 +40,7 @@
     <string name="ball_details">Standard size for cricket Made from High Quality tanned Rubber,Maruti Brand,Made in India</string>
     <string name="addedItem">Add Item</string>
     <string name="cancelString">clicked cancel \noperation cancel</string>
+    <string name="minusToast">Quantity can not be less than 0</string>
     <string name="quantityToast">Item Added</string>
     <string name="marqueeText">Click on Item Image to Shop</string>
     <string name="itemSelectToast">Item selected,\n choose amount and check confirm to order</string>
