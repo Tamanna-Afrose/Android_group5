@@ -1,6 +1,7 @@
 package com.example.sports_mart
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -10,6 +11,7 @@ import com.example.sports_mart.databinding.ActivityCricketBinding
 var quantity: Int = 1
 var productCost: Int = 0
 var totalCost: Int = 0
+var shoppingBill=0
 class CricketActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCricketBinding
     @SuppressLint("SuspiciousIndentation")
@@ -152,8 +154,15 @@ class CricketActivity : AppCompatActivity() {
         binding.confirm.setOnClickListener {
             bill(productCost)
             binding.cost.text = "$quantity product \nCosts " + totalCost.toString()
+            shoppingBill= shoppingBill+ totalCost
             quantity = 1;
             binding.quantity.text = quantity.toString()
+        }
+        binding.bill.setOnClickListener {
+            Log.i("Cricket", "$shoppingBill")
+            val intent = Intent(this, PaymentActivity::class.java)
+
+            startActivity(intent)
         }
     }
     fun bill(productCost: Int) {

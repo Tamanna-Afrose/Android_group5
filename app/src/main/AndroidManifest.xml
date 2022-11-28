@@ -13,6 +13,13 @@
         android:theme="@style/Theme.Sports_Mart"
         tools:targetApi="31">
         <activity
+            android:name=".PaymentActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".CricketActivity"
             android:exported="false">
             <meta-data

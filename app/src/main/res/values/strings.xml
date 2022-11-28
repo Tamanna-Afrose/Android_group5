@@ -43,4 +43,12 @@
     <string name="quantityToast">Item Added</string>
     <string name="marqueeText">Click on Item Image to Shop</string>
     <string name="itemSelectToast">Item selected,\n choose amount and check confirm to order</string>
+    <string name="totalBill">your total bill: ৳ \n %s</string>
+    <string name="Adress">cha 55/a,Badda,Dhaka</string>
+    <string name="email">abc@gmail.com</string>
+    <string name="addressText">Enter your addess</string>
+    <string name="EmailText">Enter your Email Address</string>
+    <string name="mailToast">please enter email address</string>
+    <string name="addressToast">please enter email address</string>
+    <string name="confirmOrder">Order Confirmed</string>
 </resources>
