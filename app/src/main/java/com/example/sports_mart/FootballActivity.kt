@@ -1,7 +1,6 @@
 package com.example.sports_mart
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -9,8 +8,9 @@ import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import com.example.sports_mart.databinding.ActivityCricketBinding
+import androidx.appcompat.app.AppCompatActivity
 import com.example.sports_mart.databinding.ActivityFootballBinding
+
 class FootballActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFootballBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -119,7 +119,7 @@ class FootballActivity : AppCompatActivity() {
         binding.confirm.setOnClickListener {
             bill(productCost)
             binding.cost.text = "$quantity product \nCosts " + totalCost.toString()
-            shoppingBill= shoppingBill+ totalCost
+            shoppingBill = shoppingBill + totalCost
             quantity = 1;
             binding.quantity.text = quantity.toString()
         }
@@ -129,13 +129,12 @@ class FootballActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-    fun bill(productCost: Int) {
+    private fun bill(productCost: Int) {
         Log.i("Cricket", "$quantity")
         totalCost = productCost * quantity
         Log.i("Cricket", "total amount $totalCost")
     }
-    fun animationImage(image: ImageView)
-    {
+    private fun animationImage(image: ImageView) {
         image.visibility = View.VISIBLE
         val animationFadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in)
         image.startAnimation(animationFadeIn)

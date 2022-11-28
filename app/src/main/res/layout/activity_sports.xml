@@ -6,17 +6,14 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     tools:context=".SportsActivity">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent">
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <ImageView
                 android:id="@+id/logo"
                 android:layout_width="86dp"
@@ -26,7 +23,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/blue_logo" />
-
             <TextView
                 android:id="@+id/appName"
                 android:layout_width="wrap_content"
@@ -40,7 +36,6 @@
                 android:textSize="40sp"
                 app:layout_constraintStart_toEndOf="@+id/logo"
                 app:layout_constraintTop_toTopOf="parent" />
-
             <SearchView
                 android:id="@+id/search_bar"
                 android:layout_width="match_parent"
@@ -50,9 +45,6 @@
                 android:layout_marginRight="20dp"
                 android:background="@drawable/round_button"
                 app:layout_constraintTop_toBottomOf="@+id/logo"/>
-
-
-
             <TextView
                 android:id="@+id/suggest"
                 android:layout_width="wrap_content"
@@ -68,7 +60,6 @@
                 app:layout_constraintStart_toStartOf="@+id/search_bar"
                 app:layout_constraintTop_toBottomOf="@+id/search_bar" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -76,14 +67,10 @@
             app:layout_constraintTop_toBottomOf="@+id/suggest"
             tools:layout_editor_absoluteX="-6dp"
             tools:layout_editor_absoluteY="214dp">
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-
-
-
                 <Button
                     android:id="@+id/cricket"
                     android:layout_width="match_parent"
@@ -94,7 +81,6 @@
                     android:backgroundTint="@color/DarkOliveGreen"
                     android:text="Cricket"
                     android:textSize="20sp" />
-
                 <Button
                     android:id="@+id/football"
                     android:layout_width="match_parent"
@@ -105,7 +91,6 @@
                     android:backgroundTint="@color/teal_700"
                     android:text="@string/football"
                     android:textSize="20sp" />
-
                 <Button
                     android:id="@+id/basketBall"
                     android:layout_width="match_parent"
@@ -116,7 +101,6 @@
                     android:backgroundTint="@color/DarkOliveGreen"
                     android:text="@string/basketBall"
                     android:textSize="20sp" />
-
                 <Button
                     android:id="@+id/badminton"
                     android:layout_width="match_parent"
@@ -127,7 +111,6 @@
                     android:backgroundTint="@color/teal_700"
                     android:text="@string/badminton"
                     android:textSize="20sp" />
-
                 <Button
                     android:id="@+id/golf"
                     android:layout_width="match_parent"
@@ -138,7 +121,6 @@
                     android:backgroundTint="@color/DarkOliveGreen"
                     android:text="@string/golf"
                     android:textSize="20sp" />
-
                 <Button
                     android:id="@+id/vollyBall"
                     android:layout_width="match_parent"
@@ -149,7 +131,6 @@
                     android:backgroundTint="@color/teal_700"
                     android:text="@string/vollyBall"
                     android:textSize="20sp" />
-
                 <Button
                     android:id="@+id/chess"
                     android:layout_width="match_parent"
@@ -160,7 +141,6 @@
                     android:backgroundTint="@color/DarkOliveGreen"
                     android:text="@string/chess"
                     android:textSize="20sp" />
-
                 <Button
                     android:id="@+id/polo"
                     android:layout_width="match_parent"
@@ -171,7 +151,6 @@
                     android:backgroundTint="@color/teal_700"
                     android:text="@string/polo"
                     android:textSize="20sp" />
-
                 <Button
                     android:id="@+id/carrom"
                     android:layout_width="match_parent"
@@ -182,7 +161,6 @@
                     android:backgroundTint="@color/DarkOliveGreen"
                     android:text="@string/carrom"
                     android:textSize="20sp" />
-
                 <Button
                     android:id="@+id/ludo"
                     android:layout_width="match_parent"
@@ -196,6 +174,4 @@
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

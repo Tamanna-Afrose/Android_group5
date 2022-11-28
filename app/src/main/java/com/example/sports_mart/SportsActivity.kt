@@ -13,12 +13,10 @@ class SportsActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.cricket.setOnClickListener {
             val intent = Intent(this, CricketActivity::class.java)
-
             startActivity(intent)
         }
         binding.football.setOnClickListener {
             val intent = Intent(this, FootballActivity::class.java)
-
             startActivity(intent)
         }
     }

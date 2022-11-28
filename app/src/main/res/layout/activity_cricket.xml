@@ -6,17 +6,14 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     tools:context=".CricketActivity">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent">
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <ImageView
                 android:id="@+id/logo"
                 android:layout_width="86dp"
@@ -26,7 +23,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/blue_logo" />
-
             <TextView
                 android:id="@+id/appName"
                 android:layout_width="wrap_content"
@@ -55,9 +51,7 @@
                 android:background="@color/black"
                 android:ellipsize="marquee"
                 android:marqueeRepeatLimit="marquee_forever"
-                android:scrollHorizontally="true"
-                />
-
+                android:scrollHorizontally="true" />
             <TextView
                 android:id="@+id/amount"
                 android:layout_width="wrap_content"
@@ -71,7 +65,6 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/marqueeText"
                 app:layout_constraintTop_toBottomOf="@+id/marqueeText" />
-
             <Button
                 android:id="@+id/minusButton"
                 android:layout_width="50dp"
@@ -81,7 +74,6 @@
                 app:layout_constraintStart_toStartOf="@id/amount"
                 app:layout_constraintTop_toBottomOf="@id/amount"
                 tools:layout_editor_absoluteX="95dp" />
-
             <TextView
                 android:id="@+id/quantity"
                 android:layout_width="30dp"
@@ -97,7 +89,6 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@id/minusButton"
                 app:layout_constraintTop_toBottomOf="@id/amount" />
-
             <Button
                 android:id="@+id/plusButton"
                 android:layout_width="50dp"
@@ -106,7 +97,6 @@
                 android:text="+"
                 app:layout_constraintStart_toEndOf="@id/quantity"
                 app:layout_constraintTop_toBottomOf="@id/amount" />
-
             <Button
                 android:id="@+id/confirm"
                 android:layout_width="wrap_content"
@@ -119,7 +109,6 @@
                 android:background="@drawable/round_button"
                 app:layout_constraintStart_toEndOf="@+id/plusButton"
                 app:layout_constraintTop_toBottomOf="@+id/amount" />
-
             <Button
                 android:id="@+id/bill"
                 android:layout_width="wrap_content"
@@ -128,7 +117,6 @@
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@+id/minusButton"
                 app:layout_constraintTop_toBottomOf="@+id/confirm" />
-
             <TextView
                 android:id="@+id/cost"
                 android:layout_width="wrap_content"
@@ -140,7 +128,6 @@
                 app:layout_constraintStart_toEndOf="@+id/bill"
                 app:layout_constraintTop_toTopOf="@+id/bill"></TextView>
         </androidx.constraintlayout.widget.ConstraintLayout>
-
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -150,23 +137,19 @@
             app:layout_constraintStart_toStartOf="@+id/suggest"
             app:layout_constraintTop_toBottomOf="@+id/suggest"
             tools:layout_editor_absoluteY="214dp">
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:orientation="horizontal">
-
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1">
-
                         <ImageView
                             android:id="@+id/golves"
                             android:layout_width="wrap_content"
@@ -175,7 +158,6 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:srcCompat="@drawable/gloves"
                             tools:ignore="MissingConstraints" />
-
                         <TextView
                             android:id="@+id/golveText"
                             android:layout_width="wrap_content"
@@ -186,12 +168,10 @@
                             app:layout_constraintStart_toStartOf="@+id/golves"
                             app:layout_constraintTop_toBottomOf="@+id/golves" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
-
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1">
-
                         <ImageView
                             android:id="@+id/helmet"
                             android:layout_width="wrap_content"
@@ -200,7 +180,6 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:srcCompat="@drawable/helmet"
                             tools:ignore="MissingConstraints" />
-
                         <TextView
                             android:id="@+id/helmetText"
                             android:layout_width="wrap_content"
@@ -211,20 +190,16 @@
                             app:layout_constraintStart_toStartOf="@+id/helmet"
                             app:layout_constraintTop_toBottomOf="@+id/helmet" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
-
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:orientation="horizontal">
-
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1">
-
                         <ImageView
                             android:id="@+id/bat"
                             android:layout_width="match_parent"
@@ -233,7 +208,6 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:srcCompat="@drawable/bat"
                             tools:ignore="MissingConstraints" />
-
                         <TextView
                             android:id="@+id/batText"
                             android:layout_width="wrap_content"
@@ -244,12 +218,10 @@
                             app:layout_constraintStart_toStartOf="@+id/bat"
                             app:layout_constraintTop_toBottomOf="@+id/bat" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
-
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1">
-
                         <ImageView
                             android:id="@+id/ball"
                             android:layout_width="match_parent"
@@ -258,7 +230,6 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:srcCompat="@drawable/ball"
                             tools:ignore="MissingConstraints" />
-
                         <TextView
                             android:id="@+id/ballText"
                             android:layout_width="wrap_content"
@@ -269,20 +240,16 @@
                             app:layout_constraintStart_toStartOf="@+id/ball"
                             app:layout_constraintTop_toBottomOf="@+id/ball" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
-
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:orientation="horizontal">
-
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1">
-
                         <ImageView
                             android:id="@+id/stamp"
                             android:layout_width="wrap_content"
@@ -290,7 +257,6 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:srcCompat="@drawable/stamps"
                             tools:ignore="MissingConstraints" />
-
                         <TextView
                             android:id="@+id/stampText"
                             android:layout_width="wrap_content"
@@ -301,12 +267,10 @@
                             app:layout_constraintStart_toStartOf="@+id/stamp"
                             app:layout_constraintTop_toBottomOf="@+id/stamp" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
-
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1">
-
                         <ImageView
                             android:id="@+id/jersey"
                             android:layout_width="wrap_content"
@@ -315,7 +279,6 @@
                             app:layout_constraintTop_toTopOf="parent"
                             app:srcCompat="@drawable/jersey"
                             tools:ignore="MissingConstraints" />
-
                         <TextView
                             android:id="@+id/jerseyText"
                             android:layout_width="wrap_content"
@@ -326,11 +289,8 @@
                             app:layout_constraintStart_toStartOf="@+id/jersey"
                             app:layout_constraintTop_toBottomOf="@+id/jersey" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
-
                 </LinearLayout>
             </LinearLayout>
-
         </ScrollView>
-
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

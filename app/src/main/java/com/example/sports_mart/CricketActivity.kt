@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sports_mart.databinding.ActivityCricketBinding
+
 var quantity: Int = 0
 var productCost: Int = 0
 var totalCost: Int = 0
@@ -23,7 +24,7 @@ class CricketActivity : AppCompatActivity() {
         binding = ActivityCricketBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.golveText.setOnClickListener {
-            var builder = AlertDialog.Builder(this)
+            val builder = AlertDialog.Builder(this)
             builder.setTitle(R.string.dialog_title)
             builder.setMessage(R.string.dialogMessage)
             builder.setIcon(android.R.drawable.ic_dialog_info)
@@ -38,7 +39,7 @@ class CricketActivity : AppCompatActivity() {
             alertDialog.show()
         }
         binding.helmetText.setOnClickListener {
-            var builder = AlertDialog.Builder(this)
+            val builder = AlertDialog.Builder(this)
             builder.setTitle(R.string.helmetTitle)
             builder.setMessage(R.string.helmet_details)
             builder.setIcon(android.R.drawable.ic_dialog_info)
@@ -53,7 +54,7 @@ class CricketActivity : AppCompatActivity() {
             alertDialog.show()
         }
         binding.batText.setOnClickListener {
-            var builder = AlertDialog.Builder(this)
+            val builder = AlertDialog.Builder(this)
             builder.setTitle(R.string.batTitle)
             builder.setMessage(R.string.bat_details)
             builder.setIcon(android.R.drawable.ic_dialog_info)
@@ -68,7 +69,7 @@ class CricketActivity : AppCompatActivity() {
             alertDialog.show()
         }
         binding.ballText.setOnClickListener {
-            var builder = AlertDialog.Builder(this)
+            val builder = AlertDialog.Builder(this)
             builder.setTitle(R.string.ballTitle)
             builder.setMessage(R.string.bat_details)
             builder.setIcon(android.R.drawable.ic_dialog_info)
@@ -83,7 +84,7 @@ class CricketActivity : AppCompatActivity() {
             alertDialog.show()
         }
         binding.stampText.setOnClickListener {
-            var builder = AlertDialog.Builder(this)
+            val builder = AlertDialog.Builder(this)
             builder.setTitle(R.string.stampTitle)
             builder.setMessage(R.string.stamp_details)
             builder.setIcon(android.R.drawable.ic_dialog_info)
@@ -98,7 +99,7 @@ class CricketActivity : AppCompatActivity() {
             alertDialog.show()
         }
         binding.jerseyText.setOnClickListener {
-            var builder = AlertDialog.Builder(this)
+            val builder = AlertDialog.Builder(this)
             builder.setTitle(R.string.jerseyTitle)
             builder.setMessage(R.string.jersey_details)
             builder.setIcon(android.R.drawable.ic_dialog_info)
@@ -163,9 +164,9 @@ class CricketActivity : AppCompatActivity() {
         }
         binding.confirm.setOnClickListener {
             bill(productCost)
-            binding.cost.text = "$quantity product \nCosts " + totalCost.toString()
-            shoppingBill= shoppingBill+ totalCost
-            quantity = 1;
+            binding.cost.text = "$quantity product \nCosts $totalCost"
+            shoppingBill += totalCost
+            quantity = 1
             binding.quantity.text = quantity.toString()
         }
         binding.bill.setOnClickListener {
@@ -174,13 +175,13 @@ class CricketActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-    fun animationImage(image:ImageView)
+    private fun animationImage(image:ImageView)
     {
         image.visibility = View.VISIBLE
         val animationFadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in)
         image.startAnimation(animationFadeIn)
     }
-    fun bill(productCost: Int) {
+    private fun bill(productCost: Int) {
         Log.i("Cricket", "$quantity")
         totalCost = productCost * quantity
         Log.i("Cricket", "total amount $totalCost")
