@@ -9,7 +9,6 @@ import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import com.example.sports_mart.databinding.ActivityCricketBinding
 import com.example.sports_mart.databinding.ActivityFootballBinding
 class FootballActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFootballBinding

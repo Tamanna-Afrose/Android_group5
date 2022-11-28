@@ -165,7 +165,7 @@ class CricketActivity : AppCompatActivity() {
             bill(productCost)
             binding.cost.text = "$quantity product \nCosts " + totalCost.toString()
             shoppingBill= shoppingBill+ totalCost
-            quantity = 1;
+            quantity = 0;
             binding.quantity.text = quantity.toString()
         }
         binding.bill.setOnClickListener {
