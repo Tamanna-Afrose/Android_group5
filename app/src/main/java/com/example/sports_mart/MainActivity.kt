@@ -1,8 +1,8 @@
 package com.example.sports_mart
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.sports_mart.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -12,8 +12,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.shopButton.setOnClickListener {
-            val intent = Intent(this, SoprtsActivity::class.java)
-
+            val intent = Intent(this, SportsActivity::class.java)
             startActivity(intent)
         }
     }

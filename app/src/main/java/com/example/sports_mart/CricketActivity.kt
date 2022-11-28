@@ -1,24 +1,24 @@
 package com.example.sports_mart
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sports_mart.databinding.ActivityCricketBinding
+
 var quantity: Int = 1
 var productCost: Int = 0
 var totalCost: Int = 0
+
 class CricketActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCricketBinding
-    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCricketBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.golveText.setOnClickListener {
-            var builder = AlertDialog.Builder(this)
+            val builder = AlertDialog.Builder(this)
             builder.setTitle(R.string.dialog_title)
             builder.setMessage(R.string.dialogMessage)
             builder.setIcon(android.R.drawable.ic_dialog_info)
