@@ -4,6 +4,9 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.view.animation.AnimationUtils
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -128,26 +131,32 @@ class CricketActivity : AppCompatActivity() {
             binding.quantity.text = quantity.toString()
         }
         binding.golves.setOnClickListener {
+            animationImage(binding.golves)
             Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
             productCost = 460
         }
         binding.helmet.setOnClickListener {
+            animationImage(binding.helmet)
             Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
             productCost = 500
         }
         binding.ball.setOnClickListener {
+            animationImage(binding.ball)
             Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
             productCost = 67
         }
         binding.stamp.setOnClickListener {
+            animationImage(binding.stamp)
             Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
             productCost = 1280
         }
         binding.jersey.setOnClickListener {
+            animationImage(binding.jersey)
             Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
             productCost = 290
         }
         binding.bat.setOnClickListener {
+            animationImage(binding.bat)
             Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
             productCost = 5300
         }
@@ -163,6 +172,12 @@ class CricketActivity : AppCompatActivity() {
             val intent = Intent(this, PaymentActivity::class.java)
             startActivity(intent)
         }
+    }
+    fun animationImage(image:ImageView)
+    {
+        image.visibility = View.VISIBLE
+        val animationFadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in)
+        image.startAnimation(animationFadeIn)
     }
     fun bill(productCost: Int) {
         Log.i("Cricket", "$quantity")
