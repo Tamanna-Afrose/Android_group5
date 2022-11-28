@@ -18,6 +18,7 @@ class PaymentActivity : AppCompatActivity() {
             orderConfirm()
         }
         binding.backButotn.setOnClickListener {
+            shoppingBill=0
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
