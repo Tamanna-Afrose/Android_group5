@@ -24,94 +24,22 @@ class CricketActivity : AppCompatActivity() {
         binding = ActivityCricketBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.golveText.setOnClickListener {
-            val builder = AlertDialog.Builder(this)
-            builder.setTitle(R.string.dialog_title)
-            builder.setMessage(R.string.dialogMessage)
-            builder.setIcon(android.R.drawable.ic_dialog_info)
-            builder.setPositiveButton(R.string.addedItem) { dialogInterface, which ->
-                Toast.makeText(applicationContext, "Item Added", Toast.LENGTH_LONG).show()
-            }
-            builder.setNeutralButton("Cancel") { dialogInterface, which ->
-                Toast.makeText(applicationContext, R.string.cancelString, Toast.LENGTH_LONG).show()
-            }
-            val alertDialog: AlertDialog = builder.create()
-            alertDialog.setCancelable(false)
-            alertDialog.show()
+            showAlertDialog(R.string.dialog_title,R.string.dialogMessage )
         }
         binding.helmetText.setOnClickListener {
-            val builder = AlertDialog.Builder(this)
-            builder.setTitle(R.string.helmetTitle)
-            builder.setMessage(R.string.helmet_details)
-            builder.setIcon(android.R.drawable.ic_dialog_info)
-            builder.setPositiveButton(R.string.addedItem) { dialogInterface, which ->
-                Toast.makeText(applicationContext, "Item Added", Toast.LENGTH_LONG).show()
-            }
-            builder.setNeutralButton("Cancel") { dialogInterface, which ->
-                Toast.makeText(applicationContext, R.string.cancelString, Toast.LENGTH_LONG).show()
-            }
-            val alertDialog: AlertDialog = builder.create()
-            alertDialog.setCancelable(false)
-            alertDialog.show()
+            showAlertDialog(R.string.helmetTitle,R.string.helmet_details)
         }
         binding.batText.setOnClickListener {
-            val builder = AlertDialog.Builder(this)
-            builder.setTitle(R.string.batTitle)
-            builder.setMessage(R.string.bat_details)
-            builder.setIcon(android.R.drawable.ic_dialog_info)
-            builder.setPositiveButton(R.string.addedItem) { dialogInterface, which ->
-                Toast.makeText(applicationContext, "Item Added", Toast.LENGTH_LONG).show()
-            }
-            builder.setNeutralButton("Cancel") { dialogInterface, which ->
-                Toast.makeText(applicationContext, R.string.cancelString, Toast.LENGTH_LONG).show()
-            }
-            val alertDialog: AlertDialog = builder.create()
-            alertDialog.setCancelable(false)
-            alertDialog.show()
+            showAlertDialog(R.string.batTitle, R.string.bat_details)
         }
         binding.ballText.setOnClickListener {
-            val builder = AlertDialog.Builder(this)
-            builder.setTitle(R.string.ballTitle)
-            builder.setMessage(R.string.bat_details)
-            builder.setIcon(android.R.drawable.ic_dialog_info)
-            builder.setPositiveButton(R.string.addedItem) { dialogInterface, which ->
-                Toast.makeText(applicationContext, "Item Added", Toast.LENGTH_LONG).show()
-            }
-            builder.setNeutralButton("Cancel") { dialogInterface, which ->
-                Toast.makeText(applicationContext, R.string.cancelString, Toast.LENGTH_LONG).show()
-            }
-            val alertDialog: AlertDialog = builder.create()
-            alertDialog.setCancelable(false)
-            alertDialog.show()
+            showAlertDialog(R.string.ballTitle,R.string.bat_details)
         }
         binding.stampText.setOnClickListener {
-            val builder = AlertDialog.Builder(this)
-            builder.setTitle(R.string.stampTitle)
-            builder.setMessage(R.string.stamp_details)
-            builder.setIcon(android.R.drawable.ic_dialog_info)
-            builder.setPositiveButton(R.string.addedItem) { dialogInterface, which ->
-                Toast.makeText(applicationContext, "Item Added", Toast.LENGTH_LONG).show()
-            }
-            builder.setNeutralButton("Cancel") { dialogInterface, which ->
-                Toast.makeText(applicationContext, R.string.cancelString, Toast.LENGTH_LONG).show()
-            }
-            val alertDialog: AlertDialog = builder.create()
-            alertDialog.setCancelable(false)
-            alertDialog.show()
+            showAlertDialog(R.string.stampTitle,R.string.stamp_details)
         }
         binding.jerseyText.setOnClickListener {
-            val builder = AlertDialog.Builder(this)
-            builder.setTitle(R.string.jerseyTitle)
-            builder.setMessage(R.string.jersey_details)
-            builder.setIcon(android.R.drawable.ic_dialog_info)
-            builder.setPositiveButton(R.string.addedItem) { dialogInterface, which ->
-                Toast.makeText(applicationContext, "Item Added", Toast.LENGTH_LONG).show()
-            }
-            builder.setNeutralButton("Cancel") { dialogInterface, which ->
-                Toast.makeText(applicationContext, R.string.cancelString, Toast.LENGTH_LONG).show()
-            }
-            val alertDialog: AlertDialog = builder.create()
-            alertDialog.setCancelable(false)
-            alertDialog.show()
+            showAlertDialog(R.string.jerseyTitle,R.string.jersey_details)
         }
         val textMarquee = binding.marqueeText
         textMarquee.isSelected = true
@@ -175,8 +103,22 @@ class CricketActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-    private fun animationImage(image:ImageView)
-    {
+    private fun showAlertDialog(title: Int, message: Int){
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle(title)
+        builder.setMessage(message)
+        builder.setIcon(android.R.drawable.ic_dialog_info)
+        builder.setPositiveButton(R.string.addedItem) { dialogInterface, which ->
+            Toast.makeText(applicationContext, "Item Added", Toast.LENGTH_LONG).show()
+        }
+        builder.setNeutralButton("Cancel") { dialogInterface, which ->
+            Toast.makeText(applicationContext, R.string.cancelString, Toast.LENGTH_LONG).show()
+        }
+        val alertDialog: AlertDialog = builder.create()
+        alertDialog.setCancelable(false)
+        alertDialog.show()
+    }
+    private fun animationImage(image:ImageView) {
         image.visibility = View.VISIBLE
         val animationFadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in)
         image.startAnimation(animationFadeIn)
