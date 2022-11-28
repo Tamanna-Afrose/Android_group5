@@ -40,7 +40,41 @@
     <string name="ball_details">Standard size for cricket Made from High Quality tanned Rubber,Maruti Brand,Made in India</string>
     <string name="addedItem">Add Item</string>
     <string name="cancelString">clicked cancel \noperation cancel</string>
+    <string name="minusToast">Quantity can not be less than 0</string>
     <string name="quantityToast">Item Added</string>
     <string name="marqueeText">Click on Item Image to Shop</string>
     <string name="itemSelectToast">Item selected,\n choose amount and check confirm to order</string>
+    <string name="totalBill">your total bill: \n৳ %s</string>
+    <string name="Adress">cha 55/a,Badda,Dhaka</string>
+    <string name="email">abc@gmail.com</string>
+    <string name="addressText">Enter your addess</string>
+    <string name="EmailText">Enter your Email Address</string>
+    <string name="mailToast">please enter email address</string>
+    <string name="addressToast">please enter your address</string>
+    <string name="confirmOrder">Order Confirmed</string>
+    <string name="payment_method">Select a Payment Method</string>
+    <string name="Bkash">Bkash</string>
+    <string name="card">Card/Visa</string>
+    <string name="cash">Cash On Delivery</string>
+    <string name="brazilJerseyText"><u>৳ 127: Brazil jersey For World cup 2022</u></string>
+    <string name="BrazilJerseyTitle">product details of Brazil jersey For World cup 2022:</string>
+    <string name="brazilJersey_detail">৳ 127 \nপণ্যের নাম : টি-শার্ট\ nপণ্যের ব্র্যান্ড: SP COLOURS FASHION
+\n পণ্যের উপাদান: বিশুদ্ধ তুলা \nপণ্যের রঙ :(ছবির মতো)
+\nপণ্যের ধরন: নৈমিত্তিক
+\nউৎপাদন দেশঃ বাংলাদেশ
+\nব্যবহারের ক্ষেত্র: অফিস, বিশ্ববিদ্যালয়, পার্টি, যেকোনো উৎসব
+\nঅতিরিক্ত সুবিধাঃ ৭ দিনের রিটার্ন পলিসি
+\nউপাদান: তুলা
+\nকলার: ও-নেক
+\nহাতা শৈলী: নিয়মিত হাতা, হুড: না,লিঙ্গ: পুরুষ, প্যাটার্ন টাইপ: প্রিন্ট</string>
+    <string name="shoeText"><u>৳ 1,323: Indoor And Outdoor Football Kades Boots For Football With Spikes Football Turf Waterproof</u></string>
+    <string name="shoe_title">Product details of Indoor And Outdoor Football Kades Boots For Football With Spikes Football Turf Waterproof</string>
+    <string name="shoe_details">৳ 1,323 \nFootball boot made in vietnam \nIndoor And Outdoor Football Kades  Boots For Football With Spikes  Football Turf Waterproof  Made in Vietnam High Quality  Size: 38 to 44</string>
+    <string name="netText"><u>৳ 280: Football Soccer Goal Post Nets For Sports Training Match Replace Multi Size</u></string>
+    <string name="netTitle">Product details of Football Soccer Goal Post Nets For Sports Training Match Replace Multi Size</string>
+    <string name="net_details">৳ 280 \nColor: Photo Color\n Age Range: more than the 3 years old \nType: Softball \nSize: 447 x 250 x 323m \nNet weight: 188g \nPackage Contents: 2 pcs</string>
+    <string name="foolballText"><u>৳ 840: Qatar 2022 World Cup Football - World Cup Official Football premium pasiting ball</u></string>
+    <string name="footballTittle">Product Details of Qatar 2022 World Cup Football - World Cup Official Football premium pasiting ball</string>
+    <string name="footballDetails">৳ 840 \nThis is Al RIHLA Ofiicial Football,Qatar World Cup 2022 will be played by this ball,It is the official football Qatar Football World Cup 2022,The football is made of regional PU material
+It is,, completely unstitched (without stitching)</string>
 </resources>

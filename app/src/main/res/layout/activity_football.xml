@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".FootballActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="86dp"
+                android:layout_height="79dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/blue_logo" />
+
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/app_name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/DarkBlue"
+                android:textSize="40sp"
+                app:layout_constraintStart_toEndOf="@+id/logo"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/marqueeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/marqueeText"
+                app:layout_constraintTop_toBottomOf="@+id/logo"
+                app:layout_constraintStart_toStartOf="@+id/logo"
+                android:layout_margin="10dp"
+                android:padding="15dp"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@color/black"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                />
+
+            <TextView
+                android:id="@+id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/amount"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/marqueeText"
+                app:layout_constraintTop_toBottomOf="@+id/marqueeText" />
+
+            <Button
+                android:id="@+id/minusButton"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="-"
+                app:layout_constraintStart_toStartOf="@id/amount"
+                app:layout_constraintTop_toBottomOf="@id/amount"
+                tools:layout_editor_absoluteX="95dp" />
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/LightBlue"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                android:textColor="@color/Red"
+                android:textSize="27sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/minusButton"
+                app:layout_constraintTop_toBottomOf="@id/amount" />
+
+            <Button
+                android:id="@+id/plusButton"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="+"
+                app:layout_constraintStart_toEndOf="@id/quantity"
+                app:layout_constraintTop_toBottomOf="@id/amount" />
+
+            <Button
+                android:id="@+id/confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/confirm"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                android:background="@drawable/round_button"
+                app:layout_constraintStart_toEndOf="@+id/plusButton"
+                app:layout_constraintTop_toBottomOf="@+id/amount" />
+
+            <Button
+                android:id="@+id/bill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bill"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/minusButton"
+                app:layout_constraintTop_toBottomOf="@+id/confirm" />
+
+            <TextView
+                android:id="@+id/cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Your Amount"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/bill"
+                app:layout_constraintTop_toTopOf="@+id/bill"></TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintStart_toStartOf="@+id/suggest"
+            app:layout_constraintTop_toBottomOf="@+id/suggest"
+            tools:layout_editor_absoluteY="214dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/football"
+                            android:layout_width="183dp"
+                            android:layout_height="143dp"
+                            app:flow_horizontalAlign="start"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/football"
+                            tools:ignore="MissingConstraints" />
+
+                        <TextView
+                            android:id="@+id/footballText"
+                            android:layout_width="142dp"
+                            android:layout_height="107dp"
+                            android:text="@string/foolballText"
+                            android:textColor="@color/Blue"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@+id/football"
+                            app:layout_constraintTop_toBottomOf="@+id/football" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/goalPost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="146dp"
+                            app:flow_horizontalAlign="start"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/goal_post"
+                            tools:ignore="MissingConstraints" />
+
+                        <TextView
+                            android:id="@+id/netText"
+                            android:layout_width="157dp"
+                            android:layout_height="76dp"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/netText"
+                            android:textColor="@color/Blue"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@+id/goalPost"
+                            app:layout_constraintTop_toBottomOf="@+id/goalPost" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/shoes"
+                            android:layout_width="match_parent"
+                            android:layout_height="146dp"
+                            app:flow_verticalAlign="center"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/shoes"
+                            tools:ignore="MissingConstraints" />
+
+                        <TextView
+                            android:id="@+id/shoesText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/shoeText"
+                            android:textColor="@color/Blue"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@+id/shoes"
+                            app:layout_constraintTop_toBottomOf="@+id/shoes" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/brazilJersey"
+                            android:layout_width="match_parent"
+                            android:layout_height="146dp"
+                            app:flow_verticalAlign="top"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/brazil_jersey"
+                            tools:ignore="MissingConstraints" />
+
+                        <TextView
+                            android:id="@+id/brazilJerseyText"
+                            android:layout_width="155dp"
+                            android:layout_height="57dp"
+                            android:text="@string/brazilJerseyText"
+                            android:textColor="@color/Blue"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@+id/brazilJersey"
+                            app:layout_constraintTop_toBottomOf="@+id/brazilJersey" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

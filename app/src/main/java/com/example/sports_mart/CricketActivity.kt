@@ -1,24 +1,29 @@
 package com.example.sports_mart
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.view.animation.AnimationUtils
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sports_mart.databinding.ActivityCricketBinding
-
-var quantity: Int = 1
+var quantity: Int = 0
 var productCost: Int = 0
 var totalCost: Int = 0
-
+var shoppingBill=0
 class CricketActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCricketBinding
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCricketBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.golveText.setOnClickListener {
-            val builder = AlertDialog.Builder(this)
+            var builder = AlertDialog.Builder(this)
             builder.setTitle(R.string.dialog_title)
             builder.setMessage(R.string.dialogMessage)
             builder.setIcon(android.R.drawable.ic_dialog_info)
@@ -115,8 +120,9 @@ class CricketActivity : AppCompatActivity() {
             if (quantity <= 0) {
                 Log.d("Cricket", "quantity is less than 0")
                 val toast = Toast.makeText(
-                    applicationContext, R.string.quantityToast, Toast.LENGTH_SHORT
+                    applicationContext, R.string.minusToast, Toast.LENGTH_SHORT
                 )
+                toast.show()
                 quantity = 1
             }
             binding.quantity.text = quantity.toString()
@@ -126,35 +132,53 @@ class CricketActivity : AppCompatActivity() {
             binding.quantity.text = quantity.toString()
         }
         binding.golves.setOnClickListener {
+            animationImage(binding.golves)
             Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
             productCost = 460
         }
         binding.helmet.setOnClickListener {
+            animationImage(binding.helmet)
             Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
             productCost = 500
         }
         binding.ball.setOnClickListener {
+            animationImage(binding.ball)
             Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
             productCost = 67
         }
         binding.stamp.setOnClickListener {
+            animationImage(binding.stamp)
             Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
             productCost = 1280
         }
         binding.jersey.setOnClickListener {
+            animationImage(binding.jersey)
             Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
             productCost = 290
         }
         binding.bat.setOnClickListener {
+            animationImage(binding.bat)
             Toast.makeText(applicationContext, R.string.itemSelectToast, Toast.LENGTH_LONG).show()
             productCost = 5300
         }
         binding.confirm.setOnClickListener {
             bill(productCost)
             binding.cost.text = "$quantity product \nCosts " + totalCost.toString()
+            shoppingBill= shoppingBill+ totalCost
             quantity = 1;
             binding.quantity.text = quantity.toString()
         }
+        binding.bill.setOnClickListener {
+            Log.i("Cricket", "$shoppingBill")
+            val intent = Intent(this, PaymentActivity::class.java)
+            startActivity(intent)
+        }
+    }
+    fun animationImage(image:ImageView)
+    {
+        image.visibility = View.VISIBLE
+        val animationFadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in)
+        image.startAnimation(animationFadeIn)
     }
     fun bill(productCost: Int) {
         Log.i("Cricket", "$quantity")

@@ -16,5 +16,10 @@ class SportsActivity : AppCompatActivity() {
 
             startActivity(intent)
         }
+        binding.football.setOnClickListener {
+            val intent = Intent(this, FootballActivity::class.java)
+
+            startActivity(intent)
+        }
     }
 }
